@@ -1,3 +1,4 @@
+import "./SearchBar.css";
 import { useState } from 'react';
 
 function SearchBar({ onSubmit }) {
@@ -14,14 +15,13 @@ function SearchBar({ onSubmit }) {
     };
     
     return (
-    <div>
+        <div className="search-bar">
             <form onSubmit={handleFormSubmit}>
-                
+                <label >Enter Image Search Below</label>
                 <input value={term} onChange={handleChange} />
-                
-        </form>
-    </div>
-   );
+
+            </form>
+        </div>);
 }
 
 export default SearchBar;
